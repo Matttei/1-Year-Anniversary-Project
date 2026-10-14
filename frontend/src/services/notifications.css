@@ -1,0 +1,157 @@
+.notification-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    width: calc(100% - 2rem);
+    max-width: 430px;
+
+    margin: 1rem auto;
+    padding: 1rem;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 107, 138, 0.12),
+        rgba(255, 61, 104, 0.06)
+    );
+
+    border: 1px solid rgba(255, 107, 138, 0.25);
+
+    box-shadow: 0 8px 25px rgba(216, 91, 120, 0.12);
+
+    animation: notification-appear 0.5s ease-out;
+}
+
+.notification-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 107, 138, 0.15);
+
+    font-size: 1.5rem;
+
+    animation: notif-pulse 1.8s ease-in-out infinite;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-content h3 {
+    margin: 0 0 0.25rem;
+
+    color: #b23a55;
+
+    font-size: 1rem;
+}
+
+.notification-content p {
+    margin: 0 0 0.7rem;
+
+    color: #8f5362;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.notification-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.55rem 1rem;
+
+    border: none;
+    border-radius: 999px;
+
+    background: linear-gradient(135deg, #ff6b8a, #ff3d68);
+
+    color: #fff;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(255, 61, 104, 0.3);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.notification-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 18px rgba(255, 61, 104, 0.4);
+}
+
+.notification-button:active {
+    transform: translateY(0);
+
+    box-shadow: 0 2px 8px rgba(255, 61, 104, 0.3);
+}
+
+.notification-button:focus-visible {
+    outline: 2px solid #ff6b8a;
+    outline-offset: 3px;
+}
+
+.notification-hint {
+    width: calc(100% - 2rem);
+    max-width: 430px;
+
+    margin: 1rem auto;
+    padding: 0.7rem 1rem;
+
+    border-radius: 14px;
+
+    background: rgba(255, 107, 138, 0.12);
+    border: 1px solid rgba(255, 107, 138, 0.3);
+
+    color: #b23a55;
+
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+@keyframes notification-appear {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes notif-pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .notification-card,
+    .notification-icon {
+        animation: none;
+    }
+
+    .notification-button {
+        transition: none;
+    }
+}

@@ -1,0 +1,38 @@
+body {
+  cursor: none;
+}
+
+.cursor-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+    user-select: none;
+    -webkit-user-select: none;
+
+    color: #ff4f81;
+    transform: translate(-50%, -50%) rotate(0deg);
+
+    animation: heartFloat 0.9s ease-out forwards;
+}
+
+@keyframes heartFloat {
+  0% {
+    opacity: 1;
+    transform:
+      translate(-50%, -50%)
+      scale(1)
+      rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
+
+    transform:
+      translate(
+        calc(-50% + var(--x)),
+        calc(-50% - var(--y))
+      )
+      scale(0.2)
+      rotate(var(--rotation));
+  }
+}

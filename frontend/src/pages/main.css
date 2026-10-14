@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Loved+by+the+King&family=Lovers+Quarrel&display=swap');
+.main-page-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: -2;
+    margin: 0 auto;
+}
+
+.together-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem 1rem;
+}
+
+.toghether-from {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.toghether-from h3 {
+    margin: 0;
+    white-space: nowrap;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #ff5f6d, #ff9a8b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 0.5px;
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    filter: drop-shadow(0 2px 6px rgba(255, 95, 109, 0.35));
+}
+
+/* container pt toate cutiile de timp */
+.backend-message {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    padding: 0.6rem 0.5rem;
+    border-radius: 16px;
+    background: linear-gradient(160deg, #ff8a9d, #ff5f6d);
+    box-shadow: var(--box-shadow);
+    color: #fff;
+    transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.time-unit:hover {
+    transform: scale(1.1);
+}
+
+.time-unit .value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 1;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+}
+
+.time-unit .label {
+    font-size: 0.65rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    opacity: 0.85;
+    margin-top: 0.2rem;
+}
+
+.time-unit.seconds-unit {
+    background: linear-gradient(160deg, #ffb199, #ff5f6d);
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.12);
+    }
+    50% {
+        transform: scale(0.98);
+    }
+    70% {
+        transform: scale(1.06);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: heartbeat 0.5s ease-out;
+}
+
+@media (max-width: 480px) {
+    .time-unit {
+        min-width: 52px;
+        padding: 0.5rem 0.4rem;
+    }
+    .time-unit .value {
+        font-size: 1.3rem;
+    }
+}
+.text-main {
+    transition: font-size .25s ease;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-size: clamp(1rem, 4vw, 2rem);
+    text-align: center;
+
+}

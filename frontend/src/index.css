@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Lovers+Quarrel&display=swap');
+:root {
+  /* Colors */
+  --text: #6b6375;
+  --outside-bg: #111;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+  --nav-bg: rgba(0, 0, 0, 0.9);
+  --accent: #d85b78;
+  --accent-bg: #ffe5ec;
+  --footer-top: #fff;
+  --footer-bottom: rgba(214, 90, 125);
+  --box-shadow: rgba(214, 90, 125);
+  --line: #fff;
+  /* Fonts */
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  font: 16px/1.45 var(--sans);
+
+  color: var(--text);
+  background: var(--bg);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-bg);
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg);
+}
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #c9c1c7;
+    --footer-top: rgba(214, 90, 125, 0);
+    --text-h: #ffffff;
+    --outside-bg: #fff;
+    --bg: #171419;
+    --border: #352d32;
+    --nav-bg: rgba(255, 255, 255, 0.9);
+    --accent: #f184a0;
+    --accent-bg: #39232b;
+    --line: #000;
+  }
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+
+  background: var(--outside-bg) !important;
+  color: var(--text);
+}
+
+body {
+  font-family: var(--sans);
+}
+
+/* Main application container */
+#root {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: 30rem;
+  min-height: 100svh;
+
+  margin: 0 auto;
+
+  background: var(--bg);
+  color: var(--text);
+
+  border-inline: 0.0625rem solid var(--border);
+
+  display: flex;
+  flex-direction: column;
+}
